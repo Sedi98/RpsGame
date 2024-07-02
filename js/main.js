@@ -12,16 +12,22 @@ strtAIBtn.addEventListener("click", () => {
   }
 });
 
-
 strtTwoPlayerBtn.addEventListener("click", () => {
   alert("Coming Soon");
-  
 });
 
 musicBtn.addEventListener("click", () => {
-  let confirmation = confirm("Are you sure you want to play music?");
+  let confirmation = confirm(
+    `Are you sure you want to ${musicMuted ? "unmute" : "mute"} music?`
+  );
   if (confirmation) {
-    musicPlay(mainMusic);
+    musicMuted == false
+      ? (musicBtn.innerHTML = '<i class="bx bxs-music"></i> ')
+      : (musicBtn.innerHTML = '<i class="bx bx-volume-mute"></i>');
+    musicMuted == false ? (musicMuted = true) : (musicMuted = false);
+    musicMuted == false ? musicPlay(mainMusic) : musicStop(mainMusic);
+  } else {
+    return;
   }
 });
 
@@ -40,7 +46,7 @@ function startGame() {
       countDownSection.style.display = "none";
       gameContainer.style.display = "block";
       musicStop(MatchMusic);
-    //   musicPlay(mainMusic);
+      musicMuted == false ? musicPlay(mainMusic) : musicStop(mainMusic);
     }
   }, 1000);
 
@@ -57,7 +63,9 @@ function musicStop(musicName) {
 }
 
 function gameLogic(userNumber) {
-    musicStop(victorySound)
+  musicStop(victorySound);
+  musicStop(loseSound);
+  musicStop(drawSound);
   if (userNumber === 1) {
     firstHand.innerHTML = "✊";
   } else if (userNumber === 2) {
@@ -66,13 +74,12 @@ function gameLogic(userNumber) {
     firstHand.innerHTML = "✌";
   }
 
-  secondHand.innerHTML = "sfsdf";
+  
   let randomNumber;
 
   if (vsAI) {
     randomNumber = Math.floor(Math.random() * 3) + 1;
 
-    console.log(randomNumber);
     if (randomNumber === 1) {
       secondHand.innerHTML = "✊";
     } else if (randomNumber === 2) {
@@ -84,26 +91,26 @@ function gameLogic(userNumber) {
 
   if (userNumber === randomNumber) {
     winnerAnnouncement.innerHTML = "Round Draw!";
+    musicPlay(drawSound);
   } else if (userNumber === 1 && randomNumber === 2) {
     winnerAnnouncement.innerHTML = "AI wins!";
     secondScore++;
     secondPlayerScore.innerHTML = secondScore;
-    musicPlay(loseSound)
+    musicPlay(loseSound);
   } else if (userNumber === 2 && randomNumber === 3) {
     winnerAnnouncement.innerHTML = "AI wins!";
     secondScore++;
     secondPlayerScore.innerHTML = secondScore;
-    musicPlay(loseSound)
+    musicPlay(loseSound);
   } else if (userNumber === 3 && randomNumber === 1) {
     winnerAnnouncement.innerHTML = "AI wins!";
     secondScore++;
     secondPlayerScore.innerHTML = secondScore;
-    musicPlay(loseSound)
+    musicPlay(loseSound);
   } else {
     winnerAnnouncement.innerHTML = "You win!";
     firstScore++;
     firstPlayerScore.innerHTML = firstScore;
-    musicPlay(victorySound)
-    
+    musicPlay(victorySound);
   }
 }

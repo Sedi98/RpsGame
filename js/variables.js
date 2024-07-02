@@ -19,14 +19,17 @@ let secondPlayerScore = document.querySelector(".secondPlayerScore");
 let firstHand = document.querySelector(".firstHand");
 let secondHand = document.querySelector(".secondHand");
 
-let mainMusic = new Audio("./assets/audio/MainTheme.m4a");
+let mainMusic = new Audio("./assets/audio/mainTheme.m4a");
 let MatchMusic = new Audio("./assets/audio/matchFound.m4a");
 let victorySound = new Audio("./assets/audio/victory.mp3");
 let loseSound = new Audio("./assets/audio/lose.m4a");
+let drawSound = new Audio("./assets/audio/draw.m4a");
 
 let firstScore = 0;
 let secondScore = 0;
 let vsAI = true;
 
-let firstUserChoice;
-let secondUserChoice;
+let musicMuted = true;
+
+// let firstUserChoice;
+// let secondUserChoice;
