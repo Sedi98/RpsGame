@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+  </head>
+  <body class="body">
+    <main class="container">
+      <div class="containerInner">
+        <h1 class="menuTitle">Rock, Paper, Scissors</h1>
+        <section class="menuContainer">
+          <div class="menuBtns">
+            <button class="strtAIBtn menuBtn">Vs AI</button>
+            <button class="strtTwoPlayerBtn menuBtn">2 player Mode</button>
+            <button class="closePageBtn menuBtn">Exit</button>
+            <button class="musicBtn menuBtn">Music</button>
+          </div>
+        </section>
+
+        <section class="countDown">
+          <h3 class="countDownTitle">Game will start in</h3>
+          <h1 class="countDownText"></h1>
+        </section>
+
+        <section class="gameContainer">
+          <div class="scoreContainer">
+            <div class="score">
+              <h3>You</h3>
+              <div class="firstPlayerScore">0</div>
+            </div>
+
+            <div class="score">
+              <h3>AI</h3>
+              <div class="secondPlayerScore">0</div>
+            </div>
+          </div>
+          <h2 class="winnerAnnouncement">Do First Move</h2>
+
+          <div class="gamePlaySection">
+            <div class="hands firstHand">✌</div>
+            <div class="hands secondHand">✌</div>
+            <!-- <div class="hands">✌</div> -->
+          </div>
+          <!-- User Buttons -->
+          <div class="userBtns">
+            <button onclick="gameLogic(1)" class="rockBtn userBtn">
+              ✊ Rock
+            </button>
+            <button onclick="gameLogic(2)" class="paperBtn userBtn">
+              🤚 Paper
+            </button>
+            <button onclick="gameLogic(3)" class="scissorsBtn userBtn">
+              ✌ Scissor
+            </button>
+          </div>
+        </section>
+      </div>
+
+      <!-- Footer -->
+
+      <footer class="footer">
+        <p class="footerText">&copy; 2024. Made with ❤️ by Sadi Mammadov</p>
+      </footer>
+    </main>
+    <script src="./js/variables.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

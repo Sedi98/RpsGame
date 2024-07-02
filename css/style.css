@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  background: #fc5c7d; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #6a82fb,
+    #fc5c7d
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #6a82fb,
+    #fc5c7d
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 60%;
+  height: 90%;
+
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.containerInner {
+  height: 96%;
+}
+
+.footer {
+  height: 4%;
+}
+
+.menuTitle {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.menuContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuBtns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.menuBtn {
+  background-color: #6a82fb;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+
+.menuBtn:hover {
+  background-color: #f95d80;
+  color: #fff;
+}
+
+.footerText {
+  text-align: center;
+}
+
+.score {
+  text-align: center;
+}
+
+.countDown {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.countDownTitle {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.countDownText {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.gameContainer {
+  display: none;
+  /* display: flex; */
+  flex-direction: column;
+
+  height: 100%;
+}
+
+.scoreContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.gamePlaySection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 240px;
+}
+
+.userBtn {
+  background-color: #6a82fb;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+
+.userBtn:hover {
+  background-color: #f95d80;
+  color: #fff;
+}
+
+.userBtns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.winnerAnnouncement {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  transform: scale(1);
+  color: #6a82fb;
+}
